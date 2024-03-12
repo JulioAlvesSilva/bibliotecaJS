@@ -175,7 +175,7 @@ export default function Inicio() {
                     </ul>
                     <button type='submit'>Cadastrar</button>
                 </form>
-                <label className={Style.formulario__label} style={{ display: click ? 'flex' : 'none' }}>Cadastro realizado, em breve você recebera nossas pormoções 😊!</label>
+                <label className={Style.formulario__label} style={{ display: click ? 'flex' : 'none' }}>Cadastro realizado, em breve você recebera nossas promoções 😊!</label>
 
             </div>
         </section>
