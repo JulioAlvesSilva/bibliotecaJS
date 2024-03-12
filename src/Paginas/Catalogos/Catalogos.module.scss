@@ -1,0 +1,90 @@
+.catalogos {
+    width: 80vw;
+    margin: 30px auto 100px auto;
+
+    .ordenadorPesq {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        align-items: baseline;
+        height: 80px;
+        margin: 0px 0 100px 0;
+    }
+
+    .PesquisaOrdenar {
+        display: flex;
+        align-items: center;
+        margin: 0 0 25px 0;
+        width: 430px;
+        height: 30px;
+        box-shadow: 10px 10px 10px rgb(66, 66, 66);
+        border: 1px solid;
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+
+    .card__inf__verMais {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: blue;
+        width: 100px;
+        border-radius: 5px;
+        position: absolute;
+        margin: 20px 0 50px 0;
+        right: 20px;
+        cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        &:hover label {
+            color: black;
+            cursor: pointer;
+        }
+
+        label {
+            margin: auto;
+            padding: 5px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+
+        }
+    }
+
+    .card__inf__verMenos {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: blue;
+        width: 120px;
+        border-radius: 5px;
+        position: absolute;
+        margin: 20px 0 50px 0;
+        left: 20px;
+        cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        &:hover label {
+            color: black;
+            cursor: pointer;
+        }
+
+        label {
+            margin: auto;
+            padding: 5px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+
+        }
+    }
+
+}

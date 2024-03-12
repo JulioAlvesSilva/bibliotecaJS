@@ -1,0 +1,312 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+.principal {
+    overflow-x: hidden;
+    .header {
+        background-image: url('../../../public/assets/imagens/header/header2.png');
+        height: 400px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        &__carro1 {
+            margin: 1000px auto 0 auto;
+        }
+    }
+
+    .livros {
+        margin: 0 auto;
+
+        img {
+            height: 300px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        &__infs {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            height: 80px;
+            width: 200px;
+
+            label {
+                width: 200px;
+                height: 20px;
+                font-weight: 600;
+                font-size: .9rem;
+                text-align: center;
+            }
+
+            &__1dv {
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                width: 100%;
+
+                strong {
+                    color: black;
+                    font-weight: 600;
+                }
+
+                &__2dv {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 280px;
+                    height: 20px;
+
+                    label {
+                        font-weight: 600;
+                    }
+                }
+
+                button {
+                    background-color: rgb(250, 133, 0);
+                    padding: 10px 0;
+                    margin: 0 auto;
+                    color: white;
+                    border: 0;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    width: 100%;
+                    box-shadow: 5px 5px 5px gray;
+
+                    &:hover {
+                        background-color: green;
+                        color: white;
+                        border: 1px solid black;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .slid {
+        position: relative;
+        width: 99vw;
+
+        .SetaEsquerda {
+            position: absolute;
+            left: -50px;
+            top: 45%;
+            cursor: pointer;
+            color: rgb(1, 1, 85);
+        }
+
+        .SetaDireita {
+            position: absolute;
+            right: 5px;
+            top: 45%;
+            cursor: pointer;
+            color: rgb(1, 1, 85);
+        }
+
+        &__titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            div {
+                display: flex;
+                align-items: center;
+            }
+
+            h2 {
+                font-family: "Raleway", sans-serif;
+                font-size: 2rem;
+                font-weight: 900;
+                color: rgb(199, 106, 0);
+            }
+
+            svg {
+                color: rgb(199, 106, 0);
+                margin-left: 20px;
+                stroke-width: .8px;
+            }
+
+            label {
+                font-family: "Raleway", sans-serif;
+                font-size: .8rem;
+                text-align: start;
+                margin: 10px 60px 0 0;
+                align-self: flex-end;
+                color: rgb(199, 106, 0);
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .top3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 40px;
+
+        &__titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            h2 {
+                font-family: "Raleway", sans-serif;
+                font-size: 2rem;
+                font-weight: 900;
+                color: rgb(199, 106, 0);
+                text-align: center;
+                margin-right: 10px;
+            }
+
+            svg {
+                color: rgb(199, 106, 0);
+                margin-left: 20px;
+                stroke-width: .5px;
+            }
+
+        }
+
+        &__img {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+
+            img {
+                object-fit: cover;
+                box-shadow: 10px 10px 10px gray;
+                border-radius: 5px;
+                width: 300px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .let {
+        margin: 50px 0;
+        padding: 50px 0;
+        box-shadow: 10px 10px 10px 10px gray;
+              h2 {
+                font-family: "Raleway", sans-serif;
+                font-size: 2rem;
+                font-weight: 900;
+                color: rgb(199, 106, 0);
+                text-align: center;
+                margin-right: 10px;
+                margin-bottom: 40px;
+            }
+        .leitura {
+            display: flex;
+            align-items: center;
+            padding: 0 80px;
+
+
+            &__pt1 {
+                width: 40vw;
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+
+            &__pt2 {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 40px;
+                padding: 10px 0;
+                color: rgb(77, 77, 77);
+
+                p {
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 400;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 400px;
+                    padding: 10px 20px;
+
+                    li {
+                        list-style-type: disc;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 400;
+
+                        strong {
+                            color: rgb(1, 1, 85);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .formulario{
+        width: 100vw;
+        padding: 70px 0;
+        position: relative;
+        background-color: rgb(1, 1, 85);
+        margin-bottom: 40px;
+        h2{
+            position: absolute;
+            top: 10px;
+            margin: 0 auto;
+            font-size: 2rem;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+        button{
+            position: absolute;
+            bottom: 5px;
+            right: 30px;
+            background-color: green;
+            color: white;
+            padding: 5px;
+        }
+        &__label{
+            text-align: center;
+            font-size: 1.5rem;
+            color: white;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translateX(50%);
+            display: none;
+        }
+        form ul{
+            margin: 0 0 0 10vw;
+            display: flex;
+            width: 80vw;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        form ul li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form ul li input{
+            padding: 5px 15px;
+            text-align: center;
+        }
+        form ul li label{
+            color: white;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+    }
+}

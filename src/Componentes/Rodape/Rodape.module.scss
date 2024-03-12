@@ -1,0 +1,58 @@
+.rodape {
+    background-color: rgb(199, 106, 0);
+    
+
+    &__icons {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+        svg {
+            width: 35px;
+            height: 35px;
+            stroke-width: 1;
+            color: rgb(0, 172, 63);
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+    &__2ln{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        &__infs{
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            margin-right: 50px;
+            ul{
+                h4{
+                    font-size: 1.3rem;
+                    color: rgb(0, 0, 0);
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                li{
+                    color: rgb(0, 0, 0);
+                    font-weight: 400;
+                    padding: 2px;
+                    cursor: pointer;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    &__direitos{
+        p{
+            font-weight: 600;
+            padding: 0 0 10px 10px;
+        }
+    }
+}

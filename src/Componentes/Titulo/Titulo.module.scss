@@ -1,0 +1,64 @@
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 99vw;
+    margin-top: 5px;
+
+    img {
+        width: 100px;
+
+        border-radius: 50%
+    }
+
+    .labels {
+        margin-left: 100px;
+        display: flex;
+        justify-content: space-around;
+
+        label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(1, 1, 85);
+            cursor: pointer;
+            padding: 0 30px;
+
+            &:hover {
+                text-decoration: underline;
+                color: rgb(105, 105, 105);
+            }
+        }
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        width: 100px;
+        margin-right: 50px;
+
+        &__sacola {
+            &__clique {
+                display: flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+                label {
+                    font-weight: 600;
+                    background-color: rgb(1, 1, 85);
+                    padding: 5px 8px;
+                    border-radius: 100%;
+                    position: absolute;
+                    font-size: .8rem;
+                    right: 2px;
+                    color: white;
+                }
+
+                svg {
+                    color: rgb(1, 1, 85);
+                }
+            }
+
+        }
+    }
+}

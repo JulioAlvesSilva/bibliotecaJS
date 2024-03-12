@@ -1,0 +1,8 @@
+[
+        { "id": 1, "Categoria": "Ficção" },
+        { "id": 2, "Categoria": "Esporte" },
+        { "id": 3, "Categoria": "Cultura" },
+        { "id": 4, "Categoria": "Comida" },
+        { "id": 5, "Categoria": "Ciências" },
+        { "id": 6, "Categoria": "Religioso" }
+]
