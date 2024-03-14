@@ -3,7 +3,9 @@
 .principal {
     overflow-x: hidden;
     margin-top: 40px;
-
+    @media(max-width:600px) {
+        margin-top: 20px;
+    }
     .header {
         div {
             img {
@@ -11,7 +13,7 @@
                 width: 100vw;
                 object-fit: cover;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     height: 200px;
                     width: 100vw;
                 }
@@ -26,7 +28,7 @@
     .livros {
         margin: 0 auto;
 
-        @media(max-width:500px) {
+        @media(max-width:600px) {
             margin: 0 0 0 10px;
         }
 
@@ -36,7 +38,7 @@
             object-fit: cover;
             border-radius: 5px;
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 height: 150px;
                 width: 100px;
             }
@@ -50,7 +52,7 @@
             height: 80px;
             width: 200px;
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 width: 100px;
             }
 
@@ -61,7 +63,7 @@
                 font-size: .9rem;
                 text-align: center;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     width: 130px;
                     font-size: .7rem;
                     margin: 5px 0;
@@ -106,7 +108,10 @@
     .slid {
         position: relative;
         width: 99vw;
-        margin: 0 auto;
+        margin: 55px;
+        @media(max-width:600px) {
+            margin: 20px 0 0 15px;
+        }
 
         .SetaEsquerda {
             position: absolute;
@@ -115,7 +120,7 @@
             cursor: pointer;
             color: rgb(1, 1, 85);
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 display: none;
             }
         }
@@ -127,7 +132,7 @@
             cursor: pointer;
             color: rgb(1, 1, 85);
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 display: none;
             }
         }
@@ -138,7 +143,7 @@
             justify-content: space-between;
             margin-bottom: 10px;
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 margin-bottom: 20px;
             }
 
@@ -153,7 +158,7 @@
                 font-weight: 900;
                 color: rgb(199, 106, 0);
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     font-size: 1.5rem;
                 }
             }
@@ -163,7 +168,7 @@
                 margin-left: 20px;
                 stroke-width: .8px;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     width: 20px;
                     height: 20px;
                     margin-left: 10px;
@@ -181,7 +186,7 @@
                 cursor: pointer;
                 font-weight: 600;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     margin: 10px 5px 0 0;
                 }
             }
@@ -208,7 +213,7 @@
                 text-align: center;
                 margin-right: 10px;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     font-size: 1.5rem;
                 }
             }
@@ -218,7 +223,7 @@
                 margin-left: 20px;
                 stroke-width: .5px;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     width: 30px;
                     height: 30px;
                 }
@@ -238,7 +243,7 @@
                 width: 300px;
                 cursor: pointer;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     width: 100px;
                 }
             }
@@ -259,7 +264,7 @@
             margin-right: 10px;
             margin-bottom: 40px;
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 font-size: 1.5rem;
             }
         }
@@ -269,7 +274,7 @@
             align-items: center;
             padding: 0 80px;
 
-            @media(max-width:500px) {
+            @media(max-width:600px) {
                 flex-direction: column;
             }
 
@@ -277,7 +282,7 @@
             &__pt1 {
                 width: 40vw;
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     width: 80vw;
                 }
 
@@ -296,7 +301,7 @@
                 padding: 10px 0;
                 color: rgb(77, 77, 77);
 
-                @media(max-width:500px) {
+                @media(max-width:600px) {
                     width: 95vw;
                     margin-left: 0px;
                 }
@@ -305,8 +310,9 @@
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
 
-                    @media(max-width:500px) {
+                    @media(max-width:600px) {
                         text-align: justify;
+                        font-size: .8rem;
                     }
                 }
 
@@ -317,7 +323,7 @@
                     height: 400px;
                     padding: 10px 20px;
 
-                    @media(max-width:500px) {
+                    @media(max-width:600px) {
                         height: auto;
                     }
 
@@ -326,14 +332,15 @@
                         font-family: "Montserrat", sans-serif;
                         font-weight: 400;
 
-                        @media(max-width:500px) {
+                        @media(max-width:600px) {
                             text-align: justify;
                             margin: 5px 0;
+                            font-size: .8rem;
                         }
 
                         strong {
                             color: rgb(1, 1, 85);
-                            font-weight: 600;
+                            font-weight: 800;
                         }
                     }
                 }
@@ -363,6 +370,8 @@
             text-align: center;
             @media(max-width:600px) {
                 font-size: 1rem;
+                width: 80vw;
+                margin-left: 10vw;
             }
     
         }
