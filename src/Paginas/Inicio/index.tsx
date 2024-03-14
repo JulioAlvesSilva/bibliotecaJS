@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useNavigate } from 'react-router';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill, BsBook, BsRocketTakeoff } from "react-icons/bs";
 
 export default function Inicio() {
@@ -12,6 +12,8 @@ export default function Inicio() {
     const chaves = [{ src: "livro1", id: 1 }, { src: "livro10", id: 10 }, { src: "livro40", id: 40 }];
     const [telefone, setTelefone] = useState('');
     const [click, setClick] = useState(false);
+    const [telaQnt, setTelaQnt] = useState(window.innerWidth > 590 ? 5 : 3);
+    const listaHeader = ["header1.png", "header2.png","header4.png"];
 
     function aoClicar() {
         setClick(!click)
@@ -19,10 +21,7 @@ export default function Inicio() {
 
 
     const formatarTelefone = (value: string) => {
-        // Limpa todos os caracteres não numéricos
         const cleaned = ('' + value).replace(/\D/g, '');
-
-        // Formata o número de telefone
         const match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
         if (match) {
             setTelefone(`(${match[1]}) ${match[2]}-${match[3]}`);
@@ -30,6 +29,16 @@ export default function Inicio() {
             setTelefone(value);
         }
     };
+    useEffect(() => {
+        const atualizarTelaQnt = () => {
+            setTelaQnt(window.innerWidth > 590 ? 5 : 3);
+        };
+        window.addEventListener('resize', atualizarTelaQnt);
+        return () => {
+            window.removeEventListener('resize', atualizarTelaQnt);
+        };
+    }, []);
+
 
     let sliderRef = useRef<Slider>(null);
 
@@ -37,7 +46,7 @@ export default function Inicio() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: telaQnt,
         slidesToScroll: 3
     };
     const menu2 = {
@@ -47,7 +56,16 @@ export default function Inicio() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
+    };
+    const menu3 = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
     };
     const goToNextSlide = () => {
         if (sliderRef.current) {
@@ -62,7 +80,16 @@ export default function Inicio() {
     };
     return (
         <section className={Style.principal}>
-            <div className={Style.header}></div>
+             
+            <div className={Style.header}>
+            <Slider {...menu3}>
+                {listaHeader.map((item, index) => (
+                    <div key={index}>
+                        <img src={`/assets/imagens/header/header/${item}`} alt={`imagem ${index}`} />
+                    </div>
+                ))}
+            </Slider>
+            </div>
 
             <div className={Style.slid}
                 style={{ width: '95vw', margin: '100px auto 0 4vw' }}>
@@ -80,10 +107,6 @@ export default function Inicio() {
                             <div className={Style.livros__infs}>
                                 <label>{itens.titulo}</label>
                                 <div className={Style.livros__infs__1dv}>
-                                    {/* <div className={Style.livros__infs__1dv__2dv}>
-                                        <label style={{ color: 'gold', fontWeight: '400' }}> {estrelaCheia.repeat(itens.estrelas) + estrelaVazia.repeat(5 - (itens.estrelas))}<strong>({itens.avaliacao})</strong></label>
-                                        <label>{`R$: ${(itens.preco - 0.01).toFixed(2)}`}</label>
-                                    </div> */}
                                     <button onClick={() => {
                                         navigate(`/produto/${itens.id}`)
                                         window.scrollTo(0, 0);
@@ -175,7 +198,7 @@ export default function Inicio() {
                     </ul>
                     <button type='submit'>Cadastrar</button>
                 </form>
-                <label className={Style.formulario__label} style={{ display: click ? 'flex' : 'none' }}>Cadastro realizado, em breve você recebera nossas promoções 😊!</label>
+                <label className={Style.formulario__label} style={{ display: click ? 'flex' : 'none' }}>Cadastro realizado, em breve você recebera nossas pormoções 😊!</label>
 
             </div>
         </section>
