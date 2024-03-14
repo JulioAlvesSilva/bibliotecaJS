@@ -92,7 +92,7 @@ export default function Inicio() {
             </div>
 
             <div className={Style.slid}
-                style={{ width: '95vw', margin: '100px auto 0 4vw' }}>
+                style={{ width: '95vw' }}>
                 <div className={Style.slid__titulo}>
                     <div>
                         <h2>Confira nossos livros</h2>
