@@ -2,27 +2,44 @@
 
 .principal {
     overflow-x: hidden;
-    .header {
-        background-image: url('../../../public/assets/imagens/header/header2.png');
-        height: 400px;
-        background-color: black;
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
+    margin-top: 40px;
 
-        &__carro1 {
-            margin: 1000px auto 0 auto;
+    .header {
+        div {
+            img {
+                height: 400px;
+                width: 100vw;
+                object-fit: cover;
+
+                @media(max-width:500px) {
+                    height: 200px;
+                    width: 100vw;
+                }
+            }
+
+            &__carro1 {
+                margin: auto;
+            }
         }
     }
 
     .livros {
         margin: 0 auto;
 
+        @media(max-width:500px) {
+            margin: 0 0 0 10px;
+        }
+
         img {
             height: 300px;
             width: 200px;
             object-fit: cover;
             border-radius: 5px;
+
+            @media(max-width:500px) {
+                height: 150px;
+                width: 100px;
+            }
         }
 
         &__infs {
@@ -33,12 +50,22 @@
             height: 80px;
             width: 200px;
 
+            @media(max-width:500px) {
+                width: 100px;
+            }
+
             label {
                 width: 200px;
                 height: 20px;
                 font-weight: 600;
                 font-size: .9rem;
                 text-align: center;
+
+                @media(max-width:500px) {
+                    width: 130px;
+                    font-size: .7rem;
+                    margin: 5px 0;
+                }
             }
 
             &__1dv {
@@ -51,18 +78,6 @@
                 strong {
                     color: black;
                     font-weight: 600;
-                }
-
-                &__2dv {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 280px;
-                    height: 20px;
-
-                    label {
-                        font-weight: 600;
-                    }
                 }
 
                 button {
@@ -91,6 +106,7 @@
     .slid {
         position: relative;
         width: 99vw;
+        margin: 0 auto;
 
         .SetaEsquerda {
             position: absolute;
@@ -98,6 +114,10 @@
             top: 45%;
             cursor: pointer;
             color: rgb(1, 1, 85);
+
+            @media(max-width:500px) {
+                display: none;
+            }
         }
 
         .SetaDireita {
@@ -106,6 +126,10 @@
             top: 45%;
             cursor: pointer;
             color: rgb(1, 1, 85);
+
+            @media(max-width:500px) {
+                display: none;
+            }
         }
 
         &__titulo {
@@ -113,6 +137,10 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
+
+            @media(max-width:500px) {
+                margin-bottom: 20px;
+            }
 
             div {
                 display: flex;
@@ -124,12 +152,22 @@
                 font-size: 2rem;
                 font-weight: 900;
                 color: rgb(199, 106, 0);
+
+                @media(max-width:500px) {
+                    font-size: 1.5rem;
+                }
             }
 
             svg {
                 color: rgb(199, 106, 0);
                 margin-left: 20px;
                 stroke-width: .8px;
+
+                @media(max-width:500px) {
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                }
             }
 
             label {
@@ -142,6 +180,10 @@
                 text-decoration: underline;
                 cursor: pointer;
                 font-weight: 600;
+
+                @media(max-width:500px) {
+                    margin: 10px 5px 0 0;
+                }
             }
         }
     }
@@ -165,12 +207,21 @@
                 color: rgb(199, 106, 0);
                 text-align: center;
                 margin-right: 10px;
+
+                @media(max-width:500px) {
+                    font-size: 1.5rem;
+                }
             }
 
             svg {
                 color: rgb(199, 106, 0);
                 margin-left: 20px;
                 stroke-width: .5px;
+
+                @media(max-width:500px) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
 
         }
@@ -186,6 +237,10 @@
                 border-radius: 5px;
                 width: 300px;
                 cursor: pointer;
+
+                @media(max-width:500px) {
+                    width: 100px;
+                }
             }
         }
     }
@@ -194,23 +249,37 @@
         margin: 50px 0;
         padding: 50px 0;
         box-shadow: 10px 10px 10px 10px gray;
-              h2 {
-                font-family: "Raleway", sans-serif;
-                font-size: 2rem;
-                font-weight: 900;
-                color: rgb(199, 106, 0);
-                text-align: center;
-                margin-right: 10px;
-                margin-bottom: 40px;
+
+        h2 {
+            font-family: "Raleway", sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgb(199, 106, 0);
+            text-align: center;
+            margin-right: 10px;
+            margin-bottom: 40px;
+
+            @media(max-width:500px) {
+                font-size: 1.5rem;
             }
+        }
+
         .leitura {
             display: flex;
             align-items: center;
             padding: 0 80px;
 
+            @media(max-width:500px) {
+                flex-direction: column;
+            }
+
 
             &__pt1 {
                 width: 40vw;
+
+                @media(max-width:500px) {
+                    width: 80vw;
+                }
 
                 img {
                     width: 100%;
@@ -227,9 +296,18 @@
                 padding: 10px 0;
                 color: rgb(77, 77, 77);
 
+                @media(max-width:500px) {
+                    width: 95vw;
+                    margin-left: 0px;
+                }
+
                 p {
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
+
+                    @media(max-width:500px) {
+                        text-align: justify;
+                    }
                 }
 
                 ul {
@@ -239,10 +317,19 @@
                     height: 400px;
                     padding: 10px 20px;
 
+                    @media(max-width:500px) {
+                        height: auto;
+                    }
+
                     li {
                         list-style-type: disc;
                         font-family: "Montserrat", sans-serif;
                         font-weight: 400;
+
+                        @media(max-width:500px) {
+                            text-align: justify;
+                            margin: 5px 0;
+                        }
 
                         strong {
                             color: rgb(1, 1, 85);
@@ -253,13 +340,20 @@
             }
         }
     }
-    .formulario{
+
+    .formulario {
         width: 100vw;
         padding: 70px 0;
         position: relative;
         background-color: rgb(1, 1, 85);
         margin-bottom: 40px;
-        h2{
+
+        @media(max-width:600px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
             position: absolute;
             top: 10px;
             margin: 0 auto;
@@ -267,8 +361,13 @@
             color: white;
             width: 100%;
             text-align: center;
+            @media(max-width:600px) {
+                font-size: 1rem;
+            }
+    
         }
-        button{
+
+        button {
             position: absolute;
             bottom: 5px;
             right: 30px;
@@ -276,7 +375,8 @@
             color: white;
             padding: 5px;
         }
-        &__label{
+
+        &__label {
             text-align: center;
             font-size: 1.5rem;
             color: white;
@@ -286,23 +386,36 @@
             transform: translateX(50%);
             display: none;
         }
-        form ul{
+
+        form ul {
             margin: 0 0 0 10vw;
             display: flex;
             width: 80vw;
             justify-content: space-between;
             margin-top: 20px;
+            @media(max-width:600px) {
+                flex-direction: column;
+            }
         }
-        form ul li{
+
+        form ul li {
             display: flex;
             flex-direction: column;
             align-items: center;
+            @media(max-width:600px) {
+                margin-bottom: 10px;
+            }
         }
-        form ul li input{
+
+        form ul li input {
             padding: 5px 15px;
             text-align: center;
+            @media(max-width:600px) {
+                padding: 5px 45px;
+            }
         }
-        form ul li label{
+
+        form ul li label {
             color: white;
             font-weight: 600;
             margin-bottom: 5px;
