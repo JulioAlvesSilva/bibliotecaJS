@@ -3,11 +3,25 @@
     justify-content: space-between;
     width: 90%;
     margin: 50px auto;
+    @media(max-width: 600px){
+        width: 100%;
+        flex-direction: column;
+        margin: 20px auto 0 auto;
+    }
 
     .itens {
         display: flex;
-        width: 70%;
+        width: 100%;
         justify-content: space-around;
+
+        @media(max-width: 600px){
+            img{
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                margin-left: 5px;
+            }
+        }
 
         .container {
             display: flex;
@@ -15,11 +29,17 @@
             text-align: left;
             justify-content: space-between;
             padding: 0 0 0 60px;
+            @media(max-width: 600px){
+                padding: 0 0 0 10px;
+            }
 
             h1 {
                 font-size: 1.5rem;
                 font-family: "Protest Strike", sans-serif;
                 font-weight: 400;
+                @media(max-width: 600px){
+                    font-size: 1.1rem;
+                }
 
                 strong {
                     color: rgb(1, 1, 85);
@@ -45,6 +65,9 @@
                 overflow-y: scroll;
                 scrollbar-width: none;
                 -ms-overflow-style: none;
+                @media(max-width: 600px){
+                    font-size: .9rem;
+                }
             }
 
             p::-webkit-scrollbar {
@@ -57,17 +80,24 @@
                     color: rgb(0, 1, 59);
                     font-size: 1rem;
                     margin-left: 5px;
+                    @media(max-width: 600px){
+                        font-size: .9rem;
+                    }
                 }
             }
 
             &__fl {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
 
                 &__preco {
                     color: rgb(0, 56, 0);
                     font-weight: 600;
                     font-size: 1.5rem;
+                    @media(max-width: 600px){
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -79,13 +109,23 @@
         flex-direction: column;
         justify-content: space-between;
         width: 20%;
+        @media(max-width: 600px){
+            width: 100%;
+            margin-top: 40px;
+        }
 
         &__sacola {
             color: rgb(0, 77, 0);
+            margin-bottom: 20px;
 
             &__preco {
                 display: flex;
                 align-items: center;
+                
+                @media(max-width: 600px){
+                    width: 50vw;
+                    justify-content: center;
+                }
 
                 label {
                     margin-left: 20px;
@@ -104,6 +144,9 @@
                 color: white;
                 border-radius: 5px;
                 cursor: pointer;
+                @media(max-width: 600px){
+                    padding: 10px 0;
+                }
             }
         }
 
@@ -115,6 +158,7 @@
                 flex-direction: column;
                 align-items: center;
                 margin: 0 5px;
+                width: 40vw;
 
                 img {
                     width: 100px;
@@ -147,6 +191,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                @media(max-width: 600px){
+                    width: 50vw;
+                    margin: 20px auto 0 auto;
+                    font-size: 1rem;
+                }
             }
 
             p {
