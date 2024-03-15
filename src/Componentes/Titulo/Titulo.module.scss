@@ -59,8 +59,11 @@
             margin-right: 10px;
 
             svg{
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
+            }
+            &__svg2{
+                display: none;
             }
         }
 
@@ -81,9 +84,9 @@
                     right: 2px;
                     color: white;
                     @media (max-width: 600px) {
-                        padding: 3px 5px;
-                        font-size: .6rem;
-                        right: 8px;
+                        padding: 5px 8px;
+                        font-size: .8rem;
+                        right: 2px;
                     }
                 }
 
