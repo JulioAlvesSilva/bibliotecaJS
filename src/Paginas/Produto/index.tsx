@@ -49,10 +49,10 @@ export default function Produto() {
                     <img src={`../../assets/imagens/livros/${item.src}.jpg`} alt={item.titulo} />
                     <div className={styles.container}>
                         <h1>
-                            {item.titulo} <strong>{`(${item.avaliacao})`}</strong>
+                            {item.titulo} <strong>{`(${item.ano})`}</strong>
                         </h1>
                         <p>{item.resenha}</p>
-                        <label>Autor: <strong>{`(${item.ano})`}</strong></label>
+                        <label>Autor: <strong>{item.autor}</strong></label>
                         <label className={styles.estrelas}> {estrelaCheia.repeat(item.estrelas) + estrelaVazia.repeat(5 - (item.estrelas))}<strong>({item.avaliacao})</strong></label>
                         <label><IoIosGlobe style={{ verticalAlign: 'bottom' }} /> Idioma: <strong>{item.idioma}</strong></label>
                         <div className={styles.container__fl}>
