@@ -52,6 +52,9 @@
         margin: 20px 0 50px 0;
         right: 20px;
         cursor: pointer;
+        @media(max-width: 600px) {
+            width: 120px;
+        }
 
         &:hover {
             cursor: pointer;
