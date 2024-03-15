@@ -52,7 +52,7 @@ export default function Produto() {
                             {item.titulo} <strong>{`(${item.avaliacao})`}</strong>
                         </h1>
                         <p>{item.resenha}</p>
-                        <label>Autor: <strong>{item.autor}</strong></label>
+                        <label>Autor: <strong>{`(${item.ano})`}</strong>
                         <label className={styles.estrelas}> {estrelaCheia.repeat(item.estrelas) + estrelaVazia.repeat(5 - (item.estrelas))}<strong>({item.avaliacao})</strong></label>
                         <label><IoIosGlobe style={{ verticalAlign: 'bottom' }} /> Idioma: <strong>{item.idioma}</strong></label>
                         <div className={styles.container__fl}>
