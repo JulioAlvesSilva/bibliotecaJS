@@ -49,7 +49,7 @@ export default function Titulo() {
               <label style={{display: itensCarrinho.length !== 0 ? 'flex' : 'none' }}>{itensCarrinho.length}</label>
             </div>
           </div>
-          <MdOutlineSupportAgent size={30} color='rgb(1, 1, 85)' />
+          <MdOutlineSupportAgent size={30} color='rgb(1, 1, 85)' className={styles.icons__svg2} />
         </div>
       </div>
     </div>
