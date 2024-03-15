@@ -13,11 +13,11 @@ export default function Filtro() {
                 <button
                     key={item.id}
                     onClick={() => SelecFiltro(item)}
+                    className={filtro === item.id ? style.filtro__botaoAcionado: style.filtro__botaoAcionado}
                     style={{
                         backgroundColor: filtro === item.id ?
                             "rgb(160, 217, 255)" : 'rgb(0, 0, 160)',
                         color: filtro === item.id ? "black" : 'white',
-                        fontSize: filtro === item.id ? '1.07rem' : '1rem'
                     }}
                 >
                     {item.Categoria}
