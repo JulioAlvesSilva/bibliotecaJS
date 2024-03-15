@@ -4,6 +4,11 @@
     margin: 40px 0;
     cursor: pointer;
     padding: 10px;
+    max-width: 99vw;
+
+    @media(max-width:600px) {
+        margin: 20px 0;
+    }
 
     &:hover {
         background-color: rgb(241, 241, 241);
@@ -12,6 +17,14 @@
 
     img {
         width: 150px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px gray;
+
+        @media(max-width:600px) {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
     }
 
     &__inf {
@@ -19,6 +32,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media(max-width:600px) {
+            width: 60%;
+        }
 
         strong {
             color: rgb(1, 1, 85);
@@ -30,17 +46,31 @@
             font-size: 1.5rem;
             font-family: "Protest Strike", sans-serif;
             font-weight: 400;
+
+            @media(max-width:600px) {
+                font-size: 1rem;
+                margin-top: 5px;
+            }
         }
 
         p {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
+            @media(max-width:600px) {
+                display: none;
+            }
         }
     }
 
     .card__inf__dl {
         display: flex;
         justify-content: space-between;
+        @media(max-width:600px) {
+            flex-direction: column;
+            display: flex;
+        justify-content: space-around;
+            height: 80%;
+        }
 
         strong {
             font-weight: 700;
@@ -51,6 +81,13 @@
             align-items: center;
             justify-content: space-between;
             width: 50%;
+            @media(max-width:600px) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+                height: 70%;
+                width: 100%;
+            }
 
             .card__inf__dl__1st__stars {
                 color: gold;
@@ -69,6 +106,9 @@
         .card__inf__dl__2st {
             display: flex;
             align-items: baseline;
+            @media(max-width:600px) {
+                justify-content: space-between;
+            }
 
             label {
                 padding: 5px;
