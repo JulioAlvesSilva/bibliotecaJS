@@ -45,7 +45,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     }
 
     const CliqueNoLinkedin = () => {
-        const linkedin = "www.linkedin.com/in/júlio-cesar-alves-da-silva-b72732a8"
+        const linkedin = "https://www.linkedin.com/in/júlio-cesar-alves-da-silva-b72732a8"
         window.open(linkedin, '_blank');
     }
 
