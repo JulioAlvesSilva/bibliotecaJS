@@ -7,7 +7,7 @@ import { AppContext } from 'main';
 
 export default function Titulo() {
   const titulos = ["Inicio", "Catálogo", "Sobre nós"];
-  const { itensCarrinho } = useContext(AppContext)!;
+  const { itensCarrinho, CliqueWhats} = useContext(AppContext)!;
   const navigate = useNavigate();
   const location = useLocation();
   let labelClicada: number | null = null;
@@ -42,7 +42,9 @@ export default function Titulo() {
               <label style={{display: itensCarrinho.length !== 0 ? 'flex' : 'none' }}>{itensCarrinho.length}</label>
             </div>
           </div>
-          <MdOutlineSupportAgent size={30} color='rgb(1, 1, 85)' className={styles.icons__svg2}/>
+          <MdOutlineSupportAgent size={30} color='rgb(1, 1, 85)' className={styles.icons__svg2}
+          onClick={CliqueWhats}
+          />
         </div>
       </div>
     </div>
