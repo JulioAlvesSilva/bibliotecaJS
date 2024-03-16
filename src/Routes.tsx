@@ -4,6 +4,7 @@ import Catalogos from 'Paginas/Catalogos';
 import Inicio from 'Paginas/Inicio';
 import Produto from 'Paginas/Produto';
 import Sacola from 'Paginas/Sacola';
+import { SobreNos } from 'Paginas/SobreNos';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
