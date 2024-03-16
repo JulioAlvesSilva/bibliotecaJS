@@ -33,12 +33,6 @@
             margin: 0 0 10px 0;
             width: 290px;
         }
-
-        svg {
-            @media(max-width: 600px) {
-                padding-left: 50px;
-            }
-        }
     }
 
     .card__inf__verMais {
