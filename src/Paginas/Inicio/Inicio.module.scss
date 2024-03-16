@@ -3,9 +3,11 @@
 .principal {
     overflow-x: hidden;
     margin-top: 40px;
+
     @media(max-width:600px) {
         margin-top: 20px;
     }
+
     .header {
         div {
             img {
@@ -38,6 +40,11 @@
             object-fit: cover;
             border-radius: 5px;
 
+            @media(max-width:1000px) {
+                height: 190px;
+                width: 130px;
+            }
+
             @media(max-width:600px) {
                 height: 150px;
                 width: 100px;
@@ -52,6 +59,10 @@
             height: 80px;
             width: 200px;
 
+            @media(max-width:1000px) {
+                width: 130px;
+            }
+
             @media(max-width:600px) {
                 width: 100px;
             }
@@ -62,6 +73,12 @@
                 font-weight: 600;
                 font-size: .9rem;
                 text-align: center;
+
+                @media(max-width:1000px) {
+                    width: 130px;
+                    font-size: .7rem;
+                    margin: 5px 0;
+                }
 
                 @media(max-width:600px) {
                     width: 130px;
@@ -109,6 +126,18 @@
         position: relative;
         width: 99vw;
         margin: 55px;
+
+        svg{
+            @media(max-width:1000px) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media(max-width:1000px) {
+            margin: 45px 0 0 40px;
+        }
+
         @media(max-width:600px) {
             margin: 35px 0 0 15px;
         }
@@ -119,6 +148,11 @@
             top: 45%;
             cursor: pointer;
             color: rgb(1, 1, 85);
+
+            @media(max-width:1000px) {
+                left: -38px;
+            }
+    
 
             @media(max-width:600px) {
                 display: none;
@@ -131,6 +165,10 @@
             top: 45%;
             cursor: pointer;
             color: rgb(1, 1, 85);
+
+            @media(max-width:1000px) {
+                right: 4px;
+            }
 
             @media(max-width:600px) {
                 display: none;
@@ -242,7 +280,9 @@
                 border-radius: 5px;
                 width: 300px;
                 cursor: pointer;
-
+                @media(max-width:1000px) {
+                    width: 250px;
+                }
                 @media(max-width:600px) {
                     width: 100px;
                 }
@@ -273,6 +313,10 @@
             display: flex;
             align-items: center;
             padding: 0 80px;
+
+            @media(max-width:1000px) {
+                padding: 0 10px;
+            }
 
             @media(max-width:600px) {
                 flex-direction: column;
@@ -310,6 +354,10 @@
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
 
+                    @media(max-width:1000px) {
+                        text-align: justify;
+                    }
+
                     @media(max-width:600px) {
                         text-align: justify;
                         font-size: .8rem;
@@ -322,6 +370,11 @@
                     justify-content: space-between;
                     height: 400px;
                     padding: 10px 20px;
+
+                    @media(max-width:1000px) {
+                        padding: 10px 0px 10px 20px;
+                        height: auto;
+                    }
 
                     @media(max-width:600px) {
                         height: auto;
@@ -368,12 +421,13 @@
             color: white;
             width: 100%;
             text-align: center;
+
             @media(max-width:600px) {
                 font-size: 1rem;
                 width: 80vw;
                 margin-left: 10vw;
             }
-    
+
         }
 
         button {
@@ -402,6 +456,7 @@
             width: 80vw;
             justify-content: space-between;
             margin-top: 20px;
+
             @media(max-width:600px) {
                 flex-direction: column;
             }
@@ -411,6 +466,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             @media(max-width:600px) {
                 margin-bottom: 10px;
             }
@@ -419,6 +475,7 @@
         form ul li input {
             padding: 5px 15px;
             text-align: center;
+
             @media(max-width:600px) {
                 padding: 5px 45px;
             }
