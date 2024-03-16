@@ -17,6 +17,7 @@ export default function AppRotas() {
                     <Route path='/catalogo' element={<Catalogos />} />
                     <Route path='/sacola' element={<Sacola />} />
                     <Route path='/produto/:id' element={<Produto/>}/>
+                    <Route path='/sobrenos' element={<SobreNos/>}/>
                 </Routes>
                 <Rodape/>
             </Router>
