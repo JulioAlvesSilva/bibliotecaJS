@@ -1,7 +1,7 @@
 import Styles from './Rodape.module.scss';
 import dadosFiltor from '../../Paginas/Catalogos/filtros/dados.json'
 import { IoLogoInstagram, IoLogoLinkedin, IoLogoFacebook, IoLogoWhatsapp } from "react-icons/io";
-import {AppContext} from 'main'
+import { AppContext } from 'main'
 import { useContext } from 'react';
 import { useNavigate } from 'react-router';
 
@@ -12,10 +12,10 @@ interface Props {
 
 export function Rodape() {
 
-    const { SelecFiltro } = useContext(AppContext)!;
+    const { SelecFiltro, CliqueNoFace, CliqueNoIsta, CliqueNoLinkedin, CliqueWhats } = useContext(AppContext)!;
     const navigate = useNavigate()
 
-    const irCatalogoFiltro = (item: Props) =>{
+    const irCatalogoFiltro = (item: Props) => {
         navigate('/catalogo');
         SelecFiltro(item);
         window.scrollTo(0, 0);
@@ -24,10 +24,18 @@ export function Rodape() {
     return (
         <div className={Styles.rodape}>
             <div className={Styles.rodape__icons}>
-                < IoLogoInstagram color='rgb(136, 0, 106)' />
-                < IoLogoLinkedin color='RGB(0, 119, 181)' />
-                < IoLogoFacebook color='RGB(0, 34, 109)' />
-                < IoLogoWhatsapp color='RGB(0, 172, 63)' />
+                < IoLogoInstagram color='rgb(136, 0, 106)'
+                    onClick={CliqueNoIsta}
+                />
+                < IoLogoLinkedin color='RGB(0, 119, 181)'
+                    onClick={CliqueNoLinkedin}
+                />
+                < IoLogoFacebook color='RGB(0, 34, 109)'
+                    onClick={CliqueNoFace}
+                />
+                < IoLogoWhatsapp color='RGB(0, 172, 63)'
+                    onClick={CliqueWhats}
+                />
             </div>
             <div className={Styles.rodape__2ln}>
                 <img src="/assets/imagens/header/logo.png" alt="logo da livraria" />
@@ -37,16 +45,22 @@ export function Rodape() {
                         {dadosFiltor.map(item => (
                             <div key={item.id}>
                                 <li
-                                 onClick={() => irCatalogoFiltro(item)}
-                                 >{item.Categoria}</li>
+                                    onClick={() => irCatalogoFiltro(item)}
+                                >{item.Categoria}</li>
                             </div>
                         ))}
                     </ul>
                     <ul>
                         <h4>Fale conosco</h4>
-                        <li>Dúvidas</li>
-                        <li>Sugestões</li>
-                        <li>Reclamações</li>
+                        <li
+                            onClick={CliqueWhats}
+                        >Dúvidas</li>
+                        <li
+                            onClick={CliqueWhats}
+                        >Sugestões</li>
+                        <li
+                            onClick={CliqueWhats}
+                        >Reclamações</li>
                     </ul>
                 </div>
             </div>
